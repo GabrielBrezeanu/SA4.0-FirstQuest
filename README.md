@@ -1,9 +1,21 @@
 # Learning Path
 
 ## Tasks:
+<<<<<<< HEAD
 - [0](https://github.com/GabrielBrezeanu/SA4.0-FirstQuest/blob/master/tasks/1stWEEK_README.md), [1]()
 
 ### Exercitiul 0: "First Quest - Linux Ninja, Git Warrior, Docker Shaman"
+=======
+- [1st-WEEK](https://github.com/GabrielBrezeanu/SA4.0-FirstQuest/tasks/1stWEEK_README.md)
+
+<<<<<<< HEAD
+### 1. Linux
+VM cu o distributie de linux / [WSL](https://docs.microsoft.com/en-us/windows/wsl/about):
+- (recomandare personala) Debian based - Ubuntu
+- masina virtuala va fi de folos si mai tarziu dar e mai hungry decat WSL
+- nu recomand git bash, ii lipsesc multe bash utilities
+- **puncte bonus**: deschis un shell in VM fara GUI
+>>>>>>> cdd273d (archived tasks)
 
 **Linux**:
 - am creat un VM cu Ubuntu-22.04
@@ -76,4 +88,9 @@ Scrieti un shell script care sa gaseasca acest string modificat si sa returneze 
 ### De retinut:
 - ne-ar placea sa vedem si un README pentru exercitiu in care sa intelegem mai bine cum ati gandit si rezolvat taskurile
 - comentarii in cod 
+<<<<<<< HEAD
 >>>>>>> a42b63a (Update README.md - add first exercise's tasks)
+=======
+=======
+>>>>>>> dd4884a (archived tasks)
+>>>>>>> cdd273d (archived tasks)
