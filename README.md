@@ -3,7 +3,7 @@
 ## Tasks:
 - [1st-WEEK](https://github.com/GabrielBrezeanu/SA4.0-FirstQuest/blob/master/tasks/1stWEEK_README.md)
 
-### First Quest - Linux Ninja, Git Warrior, Docker Shaman
+### 1st-week: "First Quest - Linux Ninja, Git Warrior, Docker Shaman"
 
 **Linux**:
 - am creat un VM cu Ubuntu-22.04
