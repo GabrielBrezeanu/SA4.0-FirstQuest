@@ -8,13 +8,8 @@
 **Linux**:
 - am creat un VM cu Ubuntu-22.04
 - am creat o conexiune la VM prin SSH
-
-**LinuxJourney**:
-- 
-
 **Git**:
 ```console
 f0rest:~$ git --version 
 git version 2.37.1
 ```
-
