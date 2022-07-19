@@ -83,8 +83,8 @@ engineer:x:600:alex,alina
 
 sa40@sa40-VirtualBox:~$ cat /etc/passwd | grep alex
 alex:x:1001:500::/home/alex:/bin/sh
-sa40@sa40-VirtualBox:~$ cat /etc/passwd | grep alina
-alina:x:1002:1002::/home/alina:/bin/sh
+sa40@sa40-VirtualBox:~$ cat /etc/group | grep engineer
+engineer:x:600:alex,alina
 ```
 DevOps este `primary group` pentru userul `alex` si `engineer` este `suplementary group` pentru userii `alex` si `alina`. Ne dam seama de acest lucru pentru ca `primary group`-ul este inregistrat in fisierul `/etc/passwd` iar grupurile `suplementary` sunt inregistrate in fisierul `/etc/group`.
 
