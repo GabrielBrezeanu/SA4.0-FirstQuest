@@ -169,3 +169,12 @@ alex@sa40-VirtualBox:~/SA4.0-FirstQuest$ cat emails_yahoo.txt
 part2/file58:yahooo@yahoo.com
 ```
 
+```console
+alex@sa40-VirtualBox:~/SA4.0-FirstQuest$ ./partea2.sh fisiere/
+fisiere/ wrong path
+alex@sa40-VirtualBox:~/SA4.0-FirstQuest$ ./partea2.sh 
+./partea2.sh expects at least 1 arg
+usage: ./partea2.sh <cale-director> <optional-email-provider>
+alex@sa40-VirtualBox:~/SA4.0-FirstQuest$ ./partea2.sh part2/ protonmail
+part2/ wrong path or invalid email provider
+```
