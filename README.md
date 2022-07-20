@@ -110,7 +110,7 @@ Next, am blocat userul `alina` prin `usermod -L alina`.
 **Partea 2**:
 
 Am creat un shell script care gaseste respectivele adrese de email impreuna cu numele fisierelor in care au fost gasite si le returneaza intr-un fisier numit `emails.txt`. Shell script-ul poate avea minim un argument, adica calea catre directorul in care se afla fisierele in care se face cautarea sau doua argumente, cel de-al doilea care satisface cea de-a doua cerinta a exercitiului si anume sa caute dupa alte mailuri, precum `yahoo.com`(cele de `yahoo` sunt salvate in `emails_yahoo.txt`). De asemenea, adresele de email sunt sortate iar acest lucru se face prin flag-ul `-t: k2` din comanda de `grep`, unde `:` este separatorul dintre numele fisierelor si adresa de email, iar `k2` fiind coloana aferenta adresei de email.
-```c
+```bash
 #!/bin/bash
 
 if [ $# -lt 1 ]; then
