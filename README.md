@@ -109,8 +109,8 @@ Next, am blocat userul `alina` prin `usermod -L alina`.
 
 **Partea 2**:
 
-Am creat un shell script care gaseste respectivele adrese de email impreuna cu numele fisierelor in care au fost gasite si le returneaza intr-un fisier numit `emails.txt`. Shell script-ul poate avea minim un argument, adica calea catre directorul in care se afla fisierele in care se face cautarea sau doua argumente, cel de-al doilea care satisface cea de-a doua cerinta a exercitiului si anume sa caute dupa alte mailuri, precum `yahoo.com`. De asemenea, adresele de email sunt sortate iar acest lucru se face prin flag-ul `-t: k2` din comanda de `grep`, unde `:` este separatorul dintre numele fisierelor si adresa de email, iar `k2` fiind coloana aferenta adresei de email.
-```console
+Am creat un shell script care gaseste respectivele adrese de email impreuna cu numele fisierelor in care au fost gasite si le returneaza intr-un fisier numit `emails.txt`. Shell script-ul poate avea minim un argument, adica calea catre directorul in care se afla fisierele in care se face cautarea sau doua argumente, cel de-al doilea care satisface cea de-a doua cerinta a exercitiului si anume sa caute dupa alte mailuri, precum `yahoo.com`(cele de `yahoo` sunt salvate in `emails_yahoo.txt`). De asemenea, adresele de email sunt sortate iar acest lucru se face prin flag-ul `-t: k2` din comanda de `grep`, unde `:` este separatorul dintre numele fisierelor si adresa de email, iar `k2` fiind coloana aferenta adresei de email.
+```c
 #!/bin/bash
 
 if [ $# -lt 1 ]; then
@@ -145,3 +145,27 @@ fi
 
 exit 0
 ```
+
+```console
+alex@sa40-VirtualBox:~/SA4.0-FirstQuest$ ./partea2.sh part2/
+adresele au fost returnate in emails.txt
+alex@sa40-VirtualBox:~/SA4.0-FirstQuest$ cat emails.txt 
+part2/file18:mail01@gmail.com
+part2/file36:mail02@gmail.com
+part2/file36:mail03@gmail.com
+part2/file64:mail04@gmail.com
+part2/file99:mail05@gmail.com
+part2/file7:mail06@gmail.com
+part2/file12:mail07@gmail.com
+part2/file97:mail08@gmail.com
+part2/file92:mail09@gmail.com
+part2/file61:mail10@gmail.com
+```
+
+```console
+alex@sa40-VirtualBox:~/SA4.0-FirstQuest$ ./partea2.sh part2/ yahoo
+adresele au fost returnate in emails_yahoo.txt
+alex@sa40-VirtualBox:~/SA4.0-FirstQuest$ cat emails_yahoo.txt 
+part2/file58:yahooo@yahoo.com
+```
+
