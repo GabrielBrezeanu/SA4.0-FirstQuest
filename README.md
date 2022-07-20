@@ -106,3 +106,42 @@ sa40@sa40-VirtualBox:/home/alex/SA4.0-FirstQuest$ stat -c "%U %G" /home/alex/SA4
 alex devops
 ```
 Next, am blocat userul `alina` prin `usermod -L alina`.
+
+**Partea 2**:
+
+Am creat un shell script care gaseste respectivele adrese de email impreuna cu numele fisierelor in care au fost gasite si le returneaza intr-un fisier numit `emails.txt`. Shell script-ul poate avea minim un argument, adica calea catre directorul in care se afla fisierele in care se face cautarea sau doua argumente, cel de-al doilea care satisface cea de-a doua cerinta a exercitiului si anume sa caute dupa alte mailuri, precum `yahoo.com`. De asemenea, adresele de email sunt sortate iar acest lucru se face prin flag-ul `-t: k2` din comanda de `grep`, unde `:` este separatorul dintre numele fisierelor si adresa de email, iar `k2` fiind coloana aferenta adresei de email.
+```console
+#!/bin/bash
+
+if [ $# -lt 1 ]; then
+	echo $0 expects at least 1 arg
+	echo "usage: ./partea2.sh <cale-director> <optional-email-provider>"
+	exit 1
+fi
+
+if [ $# -eq 1 ]; then
+	for file in $1
+	do
+		if [ -d $file ]; then
+			cat $file/* | grep -swHr "[[:alnum:]]\+@gmail\.com$" | sort -t: -k2 | uniq > emails.txt
+			echo "adresele au fost returnate in emails.txt"
+		else 
+			echo $file wrong path
+		fi
+	done
+fi
+
+if [ $# -eq 2 ]; then
+	for file in $1
+	do
+		if [ $2 == "yahoo" ]; then
+			cat $file/* | grep -swHr "[[:alnum:]]\+@yahoo\.com$" | sort -t: -k2 | uniq > emails_yahoo.txt
+                	echo "adresele au fost returnate in emails_yahoo.txt"
+        	else
+                	echo $file wrong path or invalid email provider
+        	fi
+	done
+fi
+
+exit 0
+```
