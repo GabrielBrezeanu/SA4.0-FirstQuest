@@ -1,0 +1,10 @@
+part2/file18:mail01@gmail.com
+part2/file36:mail02@gmail.com
+part2/file36:mail03@gmail.com
+part2/file64:mail04@gmail.com
+part2/file99:mail05@gmail.com
+part2/file7:mail06@gmail.com
+part2/file12:mail07@gmail.com
+part2/file97:mail08@gmail.com
+part2/file92:mail09@gmail.com
+part2/file61:mail10@gmail.com
