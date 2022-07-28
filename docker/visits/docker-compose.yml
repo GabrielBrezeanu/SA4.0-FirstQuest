@@ -1,0 +1,21 @@
+version: '3' # Docker-compose version
+services:
+  redis-server:
+    image: 'redis'
+  node-app:
+    restart: on-failure
+    build: . # -> make it using the Dockerfile in the current directory
+    ports:
+      - '4001:8081' # "-" specifies an array in yml files. Techincally, map many different ports inside of a single docker-compose file for a single container/service.
+
+#local_machine_port:container_port
+
+
+# By just defining these two services inside this file, Docker Compose is going to automatically 
+# create both these containers on essentially the same network.
+
+# Restart policies:
+# "no" = Never attempt to restart this . container if it stops or crashes. (obs: in YAML the value no gets interpreted as false, that's why we use "no")
+# always = If this container stops *for any reason* always attempt to restart it.
+# on-failure = Only restart if the container stops with an error code.
+# unless-stopped = Always restart unless we (the developers) forcibly stop it. 
