@@ -5,16 +5,16 @@ services:
   - docker
 
 before_install:
-  - docker build -t gbrezeanu/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t gbrezeanu/react-test -f ./docker/complex/client/Dockerfile.dev ./docker/complex/client
 
 script:
   - docker run -e CI=true gbrezeanu/react-test npm test
 
 after_success:
-  - docker build -t gbrezeanu/multi-client ./client
-  - docker build -t gbrezeanu/multi-nginx ./nginx
-  - docker build -t gbrezeanu/multi-server ./server
-  - docker build -t gbrezeanu/multi-worker ./worker
+  - docker build -t gbrezeanu/multi-client ./docker/complex/client
+  - docker build -t gbrezeanu/multi-nginx ./docker/complex/nginx
+  - docker build -t gbrezeanu/multi-server ./docker/complex/server
+  - docker build -t gbrezeanu/multi-worker ./docker/complex/worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
