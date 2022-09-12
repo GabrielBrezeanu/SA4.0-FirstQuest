@@ -1,0 +1,99 @@
+#productpage
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: productpage
+  namespace: bookinfo
+  labels:
+    app: productpage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: productpage
+  template:
+    metadata:
+      labels:
+        app: productpage
+    spec:
+      serviceAccountName: bookinfo-productpage
+      containers:
+      - name: productpage
+        image: istio/examples-bookinfo-productpage-v1
+        ports:
+        - containerPort: 9080
+---
+#details
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: details
+  namespace: bookinfo
+  labels:
+    app: details
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: details
+  template:
+    metadata:
+      labels:
+        app: details
+    spec:
+      serviceAccountName: bookinfo-details
+      containers:
+      - name: details
+        image: istio/examples-bookinfo-details-v1
+        ports:
+        - containerPort: 9080
+---
+#ratings
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ratings
+  namespace: bookinfo
+  labels:
+    app: ratings
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ratings
+  template:
+    metadata:
+      labels:
+        app: ratings
+    spec:
+      serviceAccountName: bookinfo-ratings
+      containers:
+      - name: ratings
+        image: istio/examples-bookinfo-ratings-v1
+        ports:
+        - containerPort: 9080
+---
+#reviews
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reviews
+  namespace: bookinfo
+  labels:
+    app: reviews
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reviews
+  template:
+    metadata:
+      labels:
+        app: reviews
+    spec:
+      serviceAccountName: bookinfo-reviews
+      containers:
+      - name: reviews
+        image: istio/examples-bookinfo-reviews-v3
+        ports:
+        - containerPort: 9080

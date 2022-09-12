@@ -1,0 +1,11 @@
+services:
+  details:
+    image: istio/examples-bookinfo-details-v1
+  productpage:
+    image: istio/examples-bookinfo-productpage-v1
+    ports:
+      - 8083:9080
+  ratings:
+    image: istio/examples-bookinfo-ratings-v1
+  reviews:
+    image: istio/examples-bookinfo-reviews-v3

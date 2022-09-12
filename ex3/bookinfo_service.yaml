@@ -1,0 +1,61 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: productpage
+  labels:
+    app: productpage
+    service: productpage
+spec:
+  type: NodePort
+  ports:
+  - port: 9080
+    targetPort: 9080
+    nodePort: 31515
+  selector:
+    app: productpage
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: details
+  labels:
+    app: details
+    service: details
+spec:
+  type: NodePort
+  ports:
+  - port: 9080
+    targetPort: 9080
+    nodePort: 31514
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ratings
+  labels:
+    app: ratings
+    service: ratings
+spec:
+  type: NodePort
+  ports:
+  - port: 9080
+    targetPort: 9080
+    nodePort: 31517
+  selector:
+    app: ratings
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: reviews
+  labels:
+    app: reviews
+    service: reviews
+spec:
+  type: NodePort
+  ports:
+  - port: 9080
+    targetPort: 9080
+    nodePort: 31518
+  selector:
+    app: reviews
