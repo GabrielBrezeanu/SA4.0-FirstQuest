@@ -7,33 +7,7 @@
 
 **Linux**:
 
-- Am creat un VM cu Ubuntu-22.04.
-
-```console
-sa40@sa40-VirtualBox:~$ neofetch 
-            .-/+oossssoo+/-.               sa40@sa40-VirtualBox 
-        `:+ssssssssssssssssss+:`           -------------------- 
-      -+ssssssssssssssssssyyssss+-         OS: Ubuntu 22.04 LTS x86_64 
-    .ossssssssssssssssssdMMMNysssso.       Host: VirtualBox 1.2 
-   /ssssssssssshdmmNNmmyNMMMMhssssss/      Kernel: 5.15.0-41-generic 
-  +ssssssssshmydMMMMMMMNddddyssssssss+     Uptime: 2 hours, 17 mins 
- /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/    Packages: 1750 (dpkg), 9 (snap) 
-.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Shell: bash 5.1.16 
-+sssshhhyNMMNyssssssssssssyNMMMysssssss+   Resolution: 800x600 
-ossyNMMMNyMMhsssssssssssssshmmmhssssssso   Terminal: /dev/pts/0 
-ossyNMMMNyMMhsssssssssssssshmmmhssssssso   CPU: Intel i5-10400F (1) @ 2.904GHz 
-+sssshhhyNMMNyssssssssssssyNMMMysssssss+   GPU: 00:02.0 VMware SVGA II Adapter 
-.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Memory: 522MiB / 5815MiB 
- /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/
-  +sssssssssdmydMMMMMMMMddddyssssssss+                             
-   /ssssssssssshdmNNNNmyNMMMMhssssss/                              
-    .ossssssssssssssssssdMMMNysssso.
-      -+sssssssssssssssssyyyssss+-
-        `:+ssssssssssssssssss+:`
-            .-/+oossssoo+/-.
-```
-
-- Am creat o conexiune la VM prin SSH.
+- Am creat un VM cu Ubuntu-22.04 si am facut setup-ul necesar pentru a ma putea conecta prin SSH.
 
 **Git**:
 ```console
